@@ -30,7 +30,6 @@ func calculateStartDay(weatherData []WeatherData) map[string]float64 {
 		timestamp := time.Unix(data.Dt, 0)
 		day := timestamp.Format("2006-01-02")
 
-		// Store the first temperature entry of the day
 		if _, exists := dayTempMap[day]; !exists {
 			dayTempMap[day] = data.Main.Temp
 		}
